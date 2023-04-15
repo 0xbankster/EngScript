@@ -70,8 +70,8 @@ Replace `path/to/your_program.eng` with the path to your EngScript source file.
 Here's a simple EngScript program that demonstrates how to output "Hello, World!" to the console:
 
 ``` 
-begin program display 
-"Hello, World!" 
+begin program 
+display "Hello, World!" 
 end program 
 ```
 
@@ -113,11 +113,17 @@ name is "Alice"
 ### EngScript provides various operators for different operations:
 
 Arithmetic: +, -, *, /, %
+
 Comparison: ==, !=, <, >, <=, >=
+
 Logical: and, or, not
+
 Bitwise: &, |, ^, ~, <<, >>
+
 Assignment: is, +=, -=, *=, /=, %=, &=, |=, ^=, <<=, >>=
+
 Operator precedence and associativity are similar to those in most programming languages, such as Python and C++.
+
 
 ### Control structures
 ### if/else statements:
