@@ -11,10 +11,15 @@ It combines the simplicity and readability of Python, the performance and safety
 The primary goals and design principles of EngScript include:
 
 - **Readability**: EngScript uses an English-like syntax to make the code more understandable and accessible to a wider audience, including non-programmers and LLMs.
+- 
 - **Performance**: EngScript leverages a hybrid approach with an interpreter and Just-In-Time (JIT) compilation to provide both rapid development capabilities and improved execution performance.
+- 
 - **Safety**: EngScript is implemented in Rust, a language known for its safety guarantees and memory efficiency, ensuring the language implementation is robust and reliable.
+- 
 - **Concurrency**: EngScript incorporates a concurrency model inspired by Go, enabling efficient parallel and concurrent execution of code.
+- 
 - **Cross-platform compatibility**: EngScript is designed to support multiple platforms, including Windows, macOS, Linux, and WebAssembly, making it accessible to a wide range of users and devices.
+- 
 - **Collaboration**: EngScript aims to facilitate effective collaboration between humans and LLMs, fostering an environment where both can work together to develop high-quality software.
 
 ### Applications and target audience
