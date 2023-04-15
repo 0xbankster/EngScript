@@ -315,13 +315,19 @@ System interaction
 
 ### Popular third-party libraries and how to use them
 
+```
 EngScript supports the use of third-party libraries for various purposes. Some popular libraries include:
 
 Web frameworks for developing web applications
+
 Database libraries for working with various databases
+
 Libraries for machine learning and data analysis
+
 Libraries for working with various file formats and protocols
+
 To use a third-party library, you will generally need to install it using a package manager and then import it into your EngScript code.
+```
 
 ## Object-Oriented Programming
 
