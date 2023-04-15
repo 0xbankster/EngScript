@@ -297,14 +297,21 @@ display result
 
 ### The EngScript standard library provides a wide range of functionality, including:
 
+```
 Basic I/O (e.g., reading and writing files, console input and output)
-Math functions and constants
-String manipulation
-Data structures and algorithms
-Networking and concurrency
-Time and date handling
-System interaction
 
+Math functions and constants
+
+String manipulation
+
+Data structures and algorithms
+
+Networking and concurrency
+
+Time and date handling
+
+System interaction
+```
 
 ### Popular third-party libraries and how to use them
 
