@@ -512,22 +512,37 @@ There are two types of borrowing: mutable (unique access) and immutable (shared 
 
 ## Memory safety guarantees provided by the language:
 
+```
 EngScript prevents data races, dangling pointers, and null pointer dereferences
+
 The borrow checker ensures that references to data are valid and not aliased inappropriately
+
 EngScript enforces strict lifetime rules to ensure that references never outlive the data they point to
-Performance optimization techniques:
+```
 
+### Performance optimization techniques:
+
+```
 Use efficient data structures and algorithms
-Minimize memory allocations and deallocations
-Utilize concurrency and parallelism to make the most of multi-core processors
-Interoperability
-Interfacing with other languages (e.g., C, C++, Rust):
 
+Minimize memory allocations and deallocations
+
+Utilize concurrency and parallelism to make the most of multi-core processors
+```
+
+## Interoperability
+
+### Interfacing with other languages (e.g., C, C++, Rust):
+
+```
 EngScript can interface with other languages using the Foreign Function Interface (FFI)
+
 Functions written in other languages can be declared with the extern.
 
 Keyword and their signatures must match the original functions
+
 To pass data between languages, use appropriate data types and conversions
+```
 
 ### Foreign Function Interface (FFI) and best practices:
 
