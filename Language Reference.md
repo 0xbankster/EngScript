@@ -487,19 +487,28 @@ main()
 
 ### Concurrency patterns and best practices:
 
+```
 Use lightweight tasks or threads for concurrent execution
+
 Use channels or message passing for communication between concurrent tasks
+
 Avoid shared mutable state and use synchronization primitives when necessary
+```
 
 
 ## Memory Management and Safety
 
 ### Ownership and borrowing in EngScript:
 
+```
 EngScript enforces strict ownership rules to ensure memory safety
+
 Variables have a single owner, and ownership can be transferred (moved) between variables
+
 Borrowing allows temporary access to a variable's data without transferring ownership
+
 There are two types of borrowing: mutable (unique access) and immutable (shared access)
+```
 
 ## Memory safety guarantees provided by the language:
 
