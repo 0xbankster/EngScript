@@ -153,12 +153,9 @@ while n <= 100
     n *= 2
 ```
 
-_____________________
+## Pattern matching with match:
 
-BELOW UNEDITED
-
-Pattern matching with match:
-
+``` 
 match value
     when "start"
         display "Starting the process"
@@ -168,28 +165,35 @@ match value
         display "Pausing the process"
     otherwise
         display "Unknown command"
+```
 
-Functions
-Defining and calling functions:
+## Functions
 
+### Defining and calling functions:
+
+```
 function greet(name as String) as String
     return "Hello, " + name + "!"
 
 declare greeting as String
 greeting is greet("Alice")
 display greeting
+```
 
-Function arguments and return values:
+### Function arguments and return values:
 
+```
 function add(a as Int, b as Int) as Int
     return a + b
 
 declare result as Int
 result is add(2, 3)
 display result
+```
 
-Anonymous functions and closures:
+### Anonymous functions and closures:
 
+```
 declare numbers as List of Int
 numbers is [1, 2, 3, 4, 5]
 
@@ -197,12 +201,16 @@ declare squared as List of Int
 squared is map(numbers, function (x as Int) as Int
                     return x * x
                 )
-Error handling
+```
+
+### Error handling
+
 Handling errors with Result and Option
 EngScript uses the Result and Option types to handle errors and represent optional values, respectively.
 
 Result:
 
+```
 function divide(a as Float, b as Float) as Result of Float
     if b == 0.0
         return Err("Division by zero")
@@ -216,8 +224,11 @@ match result
         display "Result: " + value
     when Err(error)
         display "Error: " + error
+```
 
-Option:
+### Option:
+
+```
 
 function find_user(id as Int) as Option of String
     if id == 1
@@ -233,8 +244,11 @@ match user
     when None
         display "User not found"
 
-Using try and catch for error handling:
+```
 
+### Using try and catch for error handling:
+
+```
 try
     declare result as Float
     result is divide(10.0, 0.0)
@@ -242,27 +256,41 @@ try
 catch error as String
     display "Error: " + error
 
-Modules and Libraries
-Importing and exporting modules
+```
+
+## Modules and Libraries
+
+### Importing and exporting modules
 
 In math.eng:
 
+```
 export function add(a as Int, b as Int) as Int
     return a + b
 
 export function multiply(a as Int, b as Int) as Int
     return a * b
 
+```
+
 In main.eng:
 
+```
 import math
 
 declare result as Int
 result is math.add(2, 3)
 display result
 
-EngScript standard library overview
-The EngScript standard library provides a wide range of functionality, including:
+```
+
+
+
+
+
+## EngScript standard library overview
+
+### The EngScript standard library provides a wide range of functionality, including:
 
 Basic I/O (e.g., reading and writing files, console input and output)
 Math functions and constants
@@ -271,7 +299,10 @@ Data structures and algorithms
 Networking and concurrency
 Time and date handling
 System interaction
-Popular third-party libraries and how to use them
+
+
+### Popular third-party libraries and how to use them
+
 EngScript supports the use of third-party libraries for various purposes. Some popular libraries include:
 
 Web frameworks for developing web applications
@@ -280,10 +311,12 @@ Libraries for machine learning and data analysis
 Libraries for working with various file formats and protocols
 To use a third-party library, you will generally need to install it using a package manager and then import it into your EngScript code.
 
-Object-Oriented Programming
-Structs
+## Object-Oriented Programming
+
+### Structs
 Defining and instantiating structs:
 
+```
 struct Point
     x as Float
     y as Float
@@ -291,7 +324,11 @@ struct Point
 declare point as Point
 point is Point(1.0, 2.0)
 
+```
+
 Accessing and modifying struct fields
+
+```
 display "X: " + point.x
 display "Y: " + point.y
 
@@ -301,9 +338,13 @@ point.y is 4.0
 display "Updated X: " + point.x
 display "Updated Y: " + point.y
 
-Enums
-Defining and using enums:
+```
 
+### Enums
+
+### Defining and using enums:
+
+```
 enum Color
     Red
     Green
@@ -320,9 +361,13 @@ match my_color
     when Color.Blue
         display "The color is blue"
 
-Traits
-Defining and implementing traits:
+```
 
+### Traits
+
+### Defining and implementing traits:
+
+```
 trait Drawable
     function draw() as String
 
@@ -341,8 +386,11 @@ my_drawable is my_circle
 
 display my_drawable.draw()
 
-Trait inheritance and composition:
+```
 
+### Trait inheritance and composition:
+
+```
 trait Shape
     function area() as Float
 
@@ -356,8 +404,14 @@ trait Printable
 impl Printable for Circle
     function print() as String
         return "Circle with radius " + self.radius
-Impls
-Implementing methods for structs and enums:
+        
+```
+        
+### Impls
+
+### Implementing methods for structs and enums:
+
+```
 
 struct Rectangle
     width as Float
@@ -372,8 +426,13 @@ my_rectangle is Rectangle(3.0, 4.0)
 
 display my_rectangle.area()
 
-Concurrency and Parallelism
-Asynchronous functions with async:
+```
+
+## Concurrency and Parallelism
+
+### Asynchronous functions with async:
+
+```
 
 async function fetch_data(url as String) as String
     // Simulate a network request
@@ -387,8 +446,11 @@ async function main()
 
 main()
 
+```
 
-Awaiting asynchronous operations with await:
+### Awaiting asynchronous operations with await:
+
+```
 async function download_files(urls as List of String)
     for url in urls
         display "Downloading " + url
@@ -403,19 +465,25 @@ async function main()
 
 main()
 
-Concurrency patterns and best practices:
+```
+
+### Concurrency patterns and best practices:
 
 Use lightweight tasks or threads for concurrent execution
 Use channels or message passing for communication between concurrent tasks
 Avoid shared mutable state and use synchronization primitives when necessary
-Memory Management and Safety
-Ownership and borrowing in EngScript:
+
+
+## Memory Management and Safety
+
+### Ownership and borrowing in EngScript:
 
 EngScript enforces strict ownership rules to ensure memory safety
 Variables have a single owner, and ownership can be transferred (moved) between variables
 Borrowing allows temporary access to a variable's data without transferring ownership
 There are two types of borrowing: mutable (unique access) and immutable (shared access)
-Memory safety guarantees provided by the language:
+
+## Memory safety guarantees provided by the language:
 
 EngScript prevents data races, dangling pointers, and null pointer dereferences
 The borrow checker ensures that references to data are valid and not aliased inappropriately
@@ -431,9 +499,10 @@ Interfacing with other languages (e.g., C, C++, Rust):
 EngScript can interface with other languages using the Foreign Function Interface (FFI)
 Functions written in other languages can be declared with the extern.
 
-keyword and their signatures must match the original functions
+Keyword and their signatures must match the original functions
 To pass data between languages, use appropriate data types and conversions
-Foreign Function Interface (FFI) and best practices:
+
+### Foreign Function Interface (FFI) and best practices:
 
 Use a separate module for FFI bindings
 Create safe and idiomatic wrappers around unsafe foreign functions
@@ -453,13 +522,101 @@ EngScript provides a variety of debugging and profiling tools to help diagnose a
 Use debuggers to step through code execution and inspect variables
 Use profilers to identify performance bottlenecks and optimize resource usage
 
-Appendices
-Glossary of terms
-Add definitions of important terms and concepts related to EngScript
+## Appendices
 
-Language grammar
-Provide a formal description of EngScript's syntax using a notation such as Backus-Naur Form (BNF) or Extended Backus-Naur Form (EBNF)
+## Glossary of terms: 
 
-EngScript style guide
-Provide guidelines and best practices for writing clean, maintainable, and idiomatic EngScript code
-Cover topics such as naming conventions, indentation, commenting, and error handling
+### Variable: 
+A named storage location that can hold a value of a specific data type.
+
+### Data type: 
+A classification of data that specifies the type of values a variable can hold, such as integers, floating-point numbers, or strings.
+
+### Operator: 
+A symbol or keyword that represents an operation to be performed on one or more values or variables.
+
+### Control structure: 
+A programming construct that allows for conditional execution of code or iteration.
+
+### Function: 
+A named sequence of instructions that performs a specific task and can be called and reused within a program.
+
+### Module: 
+A self-contained unit of code that can be imported and used by other modules or programs.
+
+### Library: 
+A collection of pre-written code, usually organized into modules, that can be imported and used in a program.
+
+### Struct: 
+A composite data type that groups together variables under one name, representing an object with properties.
+
+### Enum: 
+A data type consisting of a set of named values called elements or members, representing a choice among a fixed number of possibilities.
+
+### Trait: 
+A collection of methods and associated types that can be implemented by any data type, allowing for abstraction and code reuse.
+
+
+## Language grammar
+
+### Using Extended Backus-Naur Form (EBNF), here's a simplified version of EngScript's syntax:
+
+```
+program = { statement };
+statement = variable_declaration | assignment | control_structure | function_definition | import_statement;
+variable_declaration = "declare", identifier, "as", data_type;
+assignment = identifier, "is", expression;
+control_structure = if_statement | for_loop | while_loop | match_statement;
+function_definition = "function", identifier, "(", [parameters], ")", ["as", data_type], block;
+import_statement = "import", identifier;
+
+data_type = "Int" | "Float" | "Bool" | "String" | "Char" | "List" | "Dict" | "Tuple" | "Option" | "Result";
+expression = literal | identifier | binary_expression | function_call;
+literal = number | string | boolean | list | dict | tuple;
+binary_expression = expression, operator, expression;
+function_call = identifier, "(", [arguments], ")";
+
+if_statement = "if", expression, block, { "else if", expression, block }, [ "else", block ];
+for_loop = "for", identifier, "in", range_expression, block;
+while_loop = "while", expression, block;
+match_statement = "match", expression, "{", { "when", pattern, block }, [ "otherwise", block ], "}";
+
+block = "begin", { statement }, "end";
+
+```
+
+Please note that this is a simplified version of the grammar, and additional details would be needed for a complete representation.
+
+## EngScript style guide: 
+
+### Naming conventions: 
+Use snake_case for variable and function names, and PascalCase for structs, enums, and traits.
+
+### Indentation: 
+Indent each level of nesting with 4 spaces.
+
+### Commenting: 
+Use single-line comments (starting with //) for short explanations, and multi-line comments (enclosed between /* and */) for longer descriptions or code blocks.
+
+### Error handling: 
+Use the Result and Option types for functions that can return errors or optional values, and handle errors using match statements or try and catch blocks.
+
+### Whitespace: 
+Use blank lines to separate logical sections of code, and avoid excessive whitespace within expressions.
+
+### Line length: 
+Limit lines to a maximum of 80 characters, wrapping longer lines at an appropriate point for readability.
+
+### Code organization: 
+Group related functions, structs, and traits within the same module. Use separate modules for distinct features or components of your program.
+
+### Function design: 
+Keep functions short and focused on a single task. Use meaningful names that describe the function's purpose. Include a brief comment describing the function's behavior, parameters, and return value, if necessary.
+
+### Variable scope: 
+Declare variables as close as possible to their first use, and limit their scope to the smallest necessary block or function.
+
+### Type annotations: 
+Always include explicit type annotations for function parameters, return values, and struct fields. For variables, type annotations are optional but can be useful for readability and documentation.
+
+### By following these guidelines, your EngScript code will be clean, maintainable, and idiomatic.
