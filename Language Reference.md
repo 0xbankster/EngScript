@@ -531,23 +531,41 @@ To pass data between languages, use appropriate data types and conversions
 
 ### Foreign Function Interface (FFI) and best practices:
 
+```
 Use a separate module for FFI bindings
+
 Create safe and idiomatic wrappers around unsafe foreign functions
+
 Handle errors and edge cases gracefully
+
 Advanced Topics
-Metaprogramming and macros:
+```
 
-EngScript supports metaprogramming through macros, which allow you to generate code at compile time
-Macros are powerful but should be used judiciously to maintain code readability and maintainability
-Customizing the build process:
+### Metaprogramming and macros:
 
+```
+EngScript supports metaprogramming through macros, which allow you to generate code at compile time.
+
+Macros are powerful but should be used judiciously to maintain code readability and maintainability.
+```
+
+### Customizing the build process:
+
+```
 EngScript allows you to customize the build process using build scripts and configuration files
-Use build scripts to automate tasks such as code generation, linking to external libraries, and setting compiler flags
-Debugging and profiling tools:
 
+Use build scripts to automate tasks such as code generation, linking to external libraries, and setting compiler flags
+```
+
+### Debugging and profiling tools:
+
+```
 EngScript provides a variety of debugging and profiling tools to help diagnose and optimize performance issues
+
 Use debuggers to step through code execution and inspect variables
+
 Use profilers to identify performance bottlenecks and optimize resource usage
+```
 
 ## Appendices
 
