@@ -1,102 +1,116 @@
-Introduction:
+# Introduction:
 
-Brief overview of EngScript
+## Brief overview of EngScript
 
-EngScript is a modern programming language designed to facilitate seamless collaboration between humans and large language models (LLMs) like ChatGPT. 
-It combines the simplicity and readability of Python, the performance and safety of Rust, and the concurrency model of Go. 
-EngScript aims to maximize human readability by adopting an English-like syntax, making it easy for developers to write, read, and maintain code.
+### EngScript is a modern programming language designed to facilitate seamless collaboration between humans and large language models (LLMs) like ChatGPT. 
 
-Goals and design principles
+It combines the simplicity and readability of Python, the performance and safety of Rust, and the concurrency model of Go. EngScript aims to maximize human readability by adopting an English-like syntax, making it easy for developers to write, read, and maintain code.
+
+### Goals and design principles
+
 The primary goals and design principles of EngScript include:
 
-Readability: EngScript uses an English-like syntax to make the code more understandable and accessible to a wider audience, including non-programmers and LLMs.
+- **Readability**: EngScript uses an English-like syntax to make the code more understandable and accessible to a wider audience, including non-programmers and LLMs.
+- **Performance**: EngScript leverages a hybrid approach with an interpreter and Just-In-Time (JIT) compilation to provide both rapid development capabilities and improved execution performance.
+- **Safety**: EngScript is implemented in Rust, a language known for its safety guarantees and memory efficiency, ensuring the language implementation is robust and reliable.
+- **Concurrency**: EngScript incorporates a concurrency model inspired by Go, enabling efficient parallel and concurrent execution of code.
+- **Cross-platform compatibility**: EngScript is designed to support multiple platforms, including Windows, macOS, Linux, and WebAssembly, making it accessible to a wide range of users and devices.
+- **Collaboration**: EngScript aims to facilitate effective collaboration between humans and LLMs, fostering an environment where both can work together to develop high-quality software.
 
-Performance: EngScript leverages a hybrid approach with an interpreter and Just-In-Time (JIT) compilation to provide both rapid development capabilities and improved execution performance.
+### Applications and target audience
 
-Safety: EngScript is implemented in Rust, a language known for its safety guarantees and memory efficiency, ensuring the language implementation is robust and reliable.
-
-Concurrency: EngScript incorporates a concurrency model inspired by Go, enabling efficient parallel and concurrent execution of code.
-
-Cross-platform compatibility: EngScript is designed to support multiple platforms, including Windows, macOS, Linux, and WebAssembly, making it accessible to a wide range of users and devices.
-
-Collaboration: EngScript aims to facilitate effective collaboration between humans and LLMs, fostering an environment where both can work together to develop high-quality software.
-
-Applications and target audience
 EngScript is a versatile language suitable for a variety of applications, including but not limited to:
 
-Web development
-Data processing and analysis
-Machine learning and artificial intelligence
-Automation and scripting
-Desktop applications
-Networking and distributed systems
+- Web development
+- Data processing and analysis
+- Machine learning and artificial intelligence
+- Automation and scripting
+- Desktop applications
+- Networking and distributed systems
+
 The target audience for EngScript includes:
 
-Developers seeking an easy-to-read and efficient language for their projects
-Non-programmers who want to learn programming or collaborate with LLMs more effectively
-Researchers and AI practitioners working with large language models
-Educators and students in computer science and related fields
+- Developers seeking an easy-to-read and efficient language for their projects
+- Non-programmers who want to learn programming or collaborate with LLMs more effectively
+- Researchers and AI practitioners working with large language models
+- Educators and students in computer science and related fields
 
-Getting Started
-Installation and setup
+## Getting Started
+
+### Installation and setup
+
 To install and set up EngScript, follow these steps:
 
-Ensure you have the Rust compiler and Cargo installed on your system. You can download and install them from the official Rust website.
+1. Ensure you have the Rust compiler and Cargo installed on your system. You can download and install them from the official Rust website.
+2. Clone the EngScript repository:
 
-Clone the EngScript repository:
-git clone https://github.com/0xbankster/engscript.git
+``` git clone https://github.com/0xbankster/engscript.git ```
 
-Navigate to the repository directory:
-cd engscript
+1. Navigate to the repository directory:
 
-Build the EngScript compiler or interpreter:
-cargo build --release
+``` cd engscript ```
 
-Add the EngScript binary to your system's PATH, or create a symlink to the binary in a directory within your PATH.
+2. Build the EngScript compiler or interpreter:
 
-Running EngScript programs
+``` cargo build --release ```
+
+
+3. Add the EngScript binary to your system's PATH, or create a symlink to the binary in a directory within your PATH.
+
+### Running EngScript programs
+
 To execute an EngScript program, open a terminal or command prompt and run the following command:
-engscript run path/to/your_program.eng
 
-Replace path/to/your_program.eng with the path to your EngScript source file.
+``` engscript run path/to/your_program.eng ```
 
-Basic "Hello, World!" example
+Replace `path/to/your_program.eng` with the path to your EngScript source file.
+
+### Basic "Hello, World!" example
+
 Here's a simple EngScript program that demonstrates how to output "Hello, World!" to the console:
 
-begin program
-    display "Hello, World!"
-end program
+``` 
+begin program display 
+"Hello, World!" 
+end program 
+```
 
-To run this example, save the code in a file called hello_world.eng, and then execute the following command in your terminal or command prompt:
+To run this example, save the code in a file called `hello_world.eng`, and then execute the following command in your terminal or command prompt:
 
-engscript run hello_world.eng
+``` engscript run hello_world.eng ```
 
 This should display "Hello, World!" in your terminal or command prompt.
 
-Syntax and Semantics
-Variables and data types
+### Syntax and Semantics
+
+#### Variables and data types
+
 EngScript supports several basic data types:
 
-Int: Integer numbers (e.g., -2, 0, 42)
-Float: Floating-point numbers (e.g., 3.14, -0.001)
-Bool: Boolean values (True or False)
-String: Sequences of characters (e.g., "Hello, World!")
-Char: Single characters (e.g., 'a', 'Z', '%')
-List: Ordered collections of elements (e.g., [1, 2, 3], ["apple", "banana", "cherry"])
-Dict: Collections of key-value pairs (e.g., {"one": 1, "two": 2, "three": 3})
-Tuple: Fixed-size, ordered collections of elements (e.g., (1, "two", 3.0))
-Option: Represents optional values, either Some(value) or None
-Result: Represents the result of a computation, either Ok(value) or Err(error)
+- Int: Integer numbers (e.g., -2, 0, 42)
+- Float: Floating-point numbers (e.g., 3.14, -0.001)
+- Bool: Boolean values (True or False)
+- String: Sequences of characters (e.g., "Hello, World!")
+- Char: Single characters (e.g., 'a', 'Z', '%')
+- List: Ordered collections of elements (e.g., [1, 2, 3], ["apple", "banana", "cherry"])
+- Dict: Collections of key-value pairs (e.g., {"one": 1, "two": 2, "three": 3})
+- Tuple: Fixed-size, ordered collections of elements (e.g., (1, "two", 3.0))
+- Option: Represents optional values, either Some(value) or None
+- Result: Represents the result of a computation, either Ok(value) or Err(error)
 
-Variable declaration and assignment:
+
+### Variable declaration and assignment:
+
+``` 
 declare x as Int
 x is 10
 
 declare name as String
-name is "Alice"
+name is "Alice" 
+```
 
-Operators
-EngScript provides various operators for different operations:
+### Operators
+### EngScript provides various operators for different operations:
 
 Arithmetic: +, -, *, /, %
 Comparison: ==, !=, <, >, <=, >=
@@ -105,18 +119,20 @@ Bitwise: &, |, ^, ~, <<, >>
 Assignment: is, +=, -=, *=, /=, %=, &=, |=, ^=, <<=, >>=
 Operator precedence and associativity are similar to those in most programming languages, such as Python and C++.
 
-Control structures
-if/else statements:
+### Control structures
+### if/else statements:
 
+```
 if x > 0
     display "x is positive"
 else if x < 0
     display "x is negative"
 else
     display "x is zero"
+```
 
-for and while loops:
-
+### for and while loops:
+```
 declare sum as Int
 sum is 0
 
@@ -129,6 +145,11 @@ n is 1
 while n <= 100
     display n
     n *= 2
+```
+
+_____________________
+
+BELOW UNEDITED
 
 Pattern matching with match:
 
